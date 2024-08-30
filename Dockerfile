@@ -1,4 +1,2 @@
-FROM openjdk:11-jdk
-WORKDIR /app
-COPY target/maven-standalone-application*.jar maven-standalone-application.jar 
-CMD ["java","-jar","maven-standalone-application.jar"]
+From tomcat:latest
+COPY target/maven-standalone-application-0.0.1-SNAPSHOT.jar	/usr/local/tomcat/webapp/maven-standalone-application-0.0.1-SNAPSHOT.jar
